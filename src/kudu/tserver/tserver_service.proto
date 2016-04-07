@@ -14,6 +14,10 @@
 // KIND, either express or implied.  See the License for the
 // specific language governing permissions and limitations
 // under the License.
+
+syntax = "proto2";
+
+
 package kudu.tserver;
 
 option java_package = "org.kududb.tserver";
@@ -32,8 +36,7 @@ service TabletServerService {
   //
   // TODO: Consider refactoring this as a scan that runs a checksum aggregation
   // function.
-  rpc Checksum(ChecksumRequestPB)
-      returns (ChecksumResponsePB);
+  rpc Checksum(ChecksumRequestPB) returns (ChecksumResponsePB);
 }
 
 message ChecksumRequestPB {
